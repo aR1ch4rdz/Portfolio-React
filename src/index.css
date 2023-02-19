@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
+:root{
+    --cor-principal: #f3f5f8;
+    --cor-secundaria: #3d535f;
+    --cor-terciaria: #7f00ff;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.section_wrapper{
+    position: relative;
+    width: 100%;
+    height: 92%;
+}
+section{
+    width: 100%;
+    height: 100%;    
+}
+
