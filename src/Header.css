@@ -22,14 +22,18 @@
     justify-content: center;
     align-items: center;
 }
-.nav_items > a{
+.nav_item{
     font-family: 'Poppins';
     color: var(--cor-secundaria);
     text-decoration: none;
     font-size: clamp(0.5em,1.5em,2em);
     font-weight: 600;
     margin-right: 25px;
+    transition: ease-in-out 200ms;
 }
-.nav_items > a:hover{
+.nav_item:hover{
     color: var(--cor-terciaria);
+}
+.userPosition{
+    color: #7f00ff;
 }

@@ -1,6 +1,6 @@
 import './App.css'
 import Header from './components/Header'
-import HomeSection from './components/HomeSection'
+import HomeSection from './pages/HomeSection'
 import Sobre from './pages/Sobre'
 import Skills from './pages/Skills'
 import Projetos from './pages/Projetos'
