@@ -4,6 +4,7 @@ import { useRef } from "react"
 function Header() {
     const HeaderItems = useRef(null)
     let currentPos = 0
+     console.log()
     
     function changePosition(pos){
         HeaderItems.current.children[currentPos].classList.remove("userPosition")

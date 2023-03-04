@@ -21,11 +21,17 @@
     font-family: 'poppins';
 
 }
+#apres{
+    color: var(--cor-secundaria); 
+    font-size: clamp(1em,1.5em,2em); 
+    font-weight: 400;
+}
 .nome{
     color: var(--cor-terciaria);
-    font-size: clamp(2em,3em,4em);
+    font-size: clamp(1em,2.7em,3em);
+
 }
 .info-row{
-    width: 50%;
+    width: 100%;
     text-align: center;
 }

@@ -37,3 +37,9 @@
 .userPosition{
     color: #7f00ff;
 }
+
+@media (max-width: 500px){
+    .nav_items{
+        display: none;
+    }
+}
