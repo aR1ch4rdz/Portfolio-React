@@ -1,38 +1,31 @@
 import "../Header.css"
 import { Link } from 'react-router-dom'
-import { useRef } from "react"
+import { useRef, useState } from "react"
+import { FaBars, FaTimes } from "react-icons/fa"
 function Header() {
-    const HeaderItems = useRef(null)
-    let currentPos = 0
-     console.log()
-    
-    function changePosition(pos){
-        HeaderItems.current.children[currentPos].classList.remove("userPosition")
-        currentPos = pos
-        HeaderItems.current.children[pos].classList.add("userPosition")
-    }
+    const [isMobile, setIsMobile] = useState(false)
+
 
     return (
-        <div className="header_container">
-            <header>
-                <div className="nav_container">
-                    <nav>
-                        <div className="nav_content">
-                            <div className="coding">
-                                <h1>&lt;/&gt;</h1>
-                            </div>
 
-                            <div ref={HeaderItems} className="nav_items">
-                                <Link className="nav_item userPosition" onClick={()=>{changePosition(0)}} to="/">Home</Link>
-                                <Link className="nav_item" onClick={()=>{changePosition(1)}} to="/Sobre">Sobre</Link>
-                                <Link className="nav_item" onClick={()=>{changePosition(2)}} to="/Skills">Skills</Link>
-                                <Link className="nav_item" onClick={()=>{changePosition(3)}} to="/Projetos">Projetos</Link>
-                            </div>
-                        </div>
-                    </nav>
+        <header className="header_container">
+            <div className="coding">
+                <h1>&lt;/&gt;</h1>
+            </div>
+            <nav className="nav_container">
+                <div className={isMobile ? "mobile_nav_items" : "nav_items"} onClick={()=>setIsMobile(false)}>
+                    <Link className="nav_item" to="/">Home</Link>
+                    <Link className="nav_item" to="/Sobre">Sobre</Link>
+                    <Link className="nav_item" to="/Skills">Skills</Link>
+                    <Link className="nav_item" to="/Projetos">Projetos</Link>
                 </div>
-            </header>
-        </div>
+            </nav>
+            <div className="mobile_btn" onClick={() => { setIsMobile(!isMobile) }}>
+                {isMobile ? <FaTimes /> : <FaBars />}
+            </div>
+
+        </header>
+
     )
 }
 
