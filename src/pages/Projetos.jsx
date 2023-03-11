@@ -1,4 +1,4 @@
-import "../Projetos.css"
+import "../styles/Projetos.css"
 import { useRef } from "react"
 
 function Projetos() {
@@ -28,7 +28,6 @@ function Projetos() {
             } else {
                 arrowleft.current.classList.remove("cantClick")
             }
-
         }
         else if (e === "ArrowLeft") {
             if (sliderPos > 0) {
@@ -57,7 +56,7 @@ function Projetos() {
                             <div className="right_arrow" ref={arrowright} onClick={() => detectarTecla("ArrowRight")} >&gt;</div>
                         </div>
                     </div>
-                    <div className="slider_container">
+                    <div className="slider_container hide-scrollbar">
                         <div className="slider_gallery">
                             <div ref={Slider} className="slider">
                                 {galerry.map((slide, i) =>
@@ -70,16 +69,12 @@ function Projetos() {
                                         </a>
                                     </div>
                                 )}
-
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </section>
         </div>
-
     )
 }
 

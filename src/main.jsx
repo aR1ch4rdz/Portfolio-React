@@ -7,7 +7,7 @@ import Skills from './pages/Skills'
 import Projetos from './pages/Projetos'
 import ErrorPage from './pages/ErrorPage'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './index.css'
+import './styles/index.css'
 
 const router = createBrowserRouter([
   {
